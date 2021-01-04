@@ -1,0 +1,32 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+	<head>
+		{% block head %}
+			{% include 'layouts/head.html.twig' %}
+			<link rel="canonical" href="{{ page.url(true, true) }}" />
+		{% endblock head %}
+	</head>
+	<body id="page-top" class="{{ page.header.body_classes }}">
+		<div id="app">
+{#					{% block header %}#}
+{#						{% include 'layouts/header.html.twig' %}#}
+{#					{% endblock %}#}
+
+			{% include 'layouts/side-nav.html.twig' %}
+			{% block body %}
+				<section class="content">
+					{% block content %}
+					{% endblock %}
+				</section>
+			{% endblock %}
+
+		</div>
+		{% block footer %}
+			{% include 'layouts/footer.html.twig' %}
+		{% endblock %}
+		{% block scripts %}
+			{% include 'layouts/scripts.html.twig' %}
+		{% endblock %}
+	</body>
+</html>

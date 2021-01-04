@@ -1,0 +1,36 @@
+.btn {
+	border-radius: 300px;
+	cursor: pointer;
+	font-family: $font-alt;
+	
+	&:disabled {
+		cursor:not-allowed;
+	}
+}
+.btn-primary {
+	//btn-style(text, bg, border, hover-bg, hover-border, hover-color)
+	@include btn-style($btn-primary-color, $btn-primary-bg, $btn-primary-border, $btn-primary-hover-bg, $btn-primary-hover-border, $btn-primary-hover-color);
+}
+.btn-secondary {
+	//@include btn-style($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border, $btn-secondary-hover-bg, $btn-secondary-hover-border, $btn-secondary-hover-color);
+}
+
+.btn-outline {
+	color: white;
+	border: 1px solid;
+	border-color: white;
+	&:hover,
+	&:focus,
+	&:active,
+	&.active {
+		color: white;
+		border-color: $theme-primary;
+		background-color: $theme-primary;
+	}
+}
+
+.btn-xl {
+	font-size: 11px;
+	padding: 15px 45px;
+	text-transform: uppercase;
+}

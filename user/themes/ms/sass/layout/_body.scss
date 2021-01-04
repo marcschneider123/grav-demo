@@ -1,0 +1,59 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: $container-bg-light;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	height:100vh;
+	font-weight: 300;
+
+	&.bg-animated {
+		background: linear-gradient(to right, $blue-light, $blue-medium);
+		//background: radial-gradient(orange, yellow, $blue-light);
+	}
+
+	.bg-primary {
+		background: $theme-primary!important;
+		//background: linear-gradient($theme-primary, darken($theme-primary, 5%));
+	}
+
+	.content {
+		background-color: $container-bg-medium;
+		flex: 1 1 auto;
+		overflow-x: hidden;
+		position: relative;
+
+		div [class^="col"] {
+			z-index: 2;
+		}
+	}
+
+	#app {
+		display: flex;
+		flex: 1;
+	}
+}
+
+section {
+	padding-top: 10vh;
+
+	&.section-light {
+		background-color: $container-bg-light;
+	}
+	&.section-medium {
+		background-color: $container-bg-medium;
+	}
+}
+
+noscript {
+	border: 2px solid $red;
+	color: red;
+	width: 100%;
+	text-align: center;
+	margin-top: 10rem;
+	margin-top: 25vh;
+	padding: 1rem;
+}

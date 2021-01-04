@@ -1,0 +1,4 @@
+# Translation overrides https://learn.getgrav.org/16/content/multi-language#translation-overrides
+PLUGIN_ERROR:
+  ERROR: "Fehler"
+  ERROR_MESSAGE: "Die von Ihnen angeforderte Seite konnte nicht gefunden werden."

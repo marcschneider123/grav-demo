@@ -1,0 +1,25 @@
+{% set hideTopNav = true %}
+{% extends 'layouts/base.html.twig' %}
+
+{% block content %}
+	<section class="container">
+		<div class="row d-flex justify-content-center text-center">
+			<div class="col-sm-8 col-lg-6">
+				<div class="error-page">
+					<h1 class="text-warning">Fehler!</h1>
+					<div class="error-content">
+						<h3>
+							<i class="fal fa-exclamation-triangle  text-warning"></i>
+						</h3>
+						<p>
+							{{ page.content }}
+						</p>
+						<p>
+							<a href="/">Homepage</a>
+						</p>
+					</div><!-- /.error-content -->
+				</div><!-- /.error-page -->
+			</div>
+		</div>
+	</section>
+{% endblock %}

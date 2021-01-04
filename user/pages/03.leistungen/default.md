@@ -1,0 +1,23 @@
+---
+title: 'Leistungen'
+---
+
+- Allgemeine Krankengymnastik (KG) für Erwachsene, Kinder und Säuglinge
+- Manuelle Therapie [MT](http://www.medizinfo.de/physiotherapie/techniken/manuelle_therapie.shtml?target=_blank)
+- Krankengymnastik auf neurologischer Basis (KG-ZNS) nach [PNF](http://www.gesundheit.de/lexika/medizin-lexikon/pnf?target=_blank) (**P**ropriozeptive **N**euromuskuläre **F**azilitation)
+- [N.A.P.&reg;](https://www.renatahorst.de/kurse.php?q=nap&target=_blank) (**N**euromuskuläre **A**rthroossäre **P**lastizität)
+- Psychomotorik für Kinder (Entspannung, Graphomotorik, Rhythmik u.v.m.)
+- Schmerzmanagement
+- Atemtherapie
+- Schlucktherapie
+- Entspannungstherapie (Progressive Muskelentspannung nach Jakobsen)
+- Qi Gong
+- Schlingentisch Extensionsbehandlung
+- Klassische Massagetherapie (KMT)
+- Colonmassage
+- Wärme/Fango (WT)
+- Kältetherapie (KT)
+- Sturzprophylaxe
+- Nordic Walking
+- Kinesiologisches Taping
+- Hausbesuche

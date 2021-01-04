@@ -1,0 +1,30 @@
+$black: #000;
+$white: #fff;
+$blue-light: #8ed1f3;
+$blue-medium: #00aee2;
+$blue-dark: #002d3c;
+
+$gray-darker:      lighten($black, 13.5%); // #222
+$gray-dark:        lighten($black, 20%);   // #333
+$gray:             lighten($black, 33.5%); // #555
+$gray-light:       #ced4da;
+$gray-lighter:     #f8f9fa; // #eee
+
+$red-light: #ebcccc;
+$red: #a94442;
+$green-light: #d0e9c6;
+$green: #3c763d;
+$yellow-light: #faf2cc;
+$yellow: #8a6d3b;
+$orange: #f0ad4e;
+
+//== Theme
+//
+//## theme settings
+$theme-primary:    #00a28a;
+$theme-secondary:  #6699cc;
+$theme-tertiary:   #003399;
+
+$brand-twitter:		#1da1f2;
+$brand-facebook:	#3b5998;
+$brand-google-plus:	#dd4b39;

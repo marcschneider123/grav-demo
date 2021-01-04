@@ -1,0 +1,22 @@
+/*
+ * vendor files
+ * @note ~ denotes node_modules directory by default.
+ */
+@import "~bootstrap/scss/functions";
+$custom-file-text: (
+	de: "Datei wählen"
+);
+$theme-colors: (
+	"light": #eaeaea,
+);
+@import "~bootstrap/scss/bootstrap";
+
+@import "mixins/module";
+@import "utils/module";
+@import "components/module";
+@import "base/typography";
+
+@import "layout/module";
+@import "sections/module";
+
+@import "~vue-image-lightbox/dist/vue-image-lightbox.min.css";

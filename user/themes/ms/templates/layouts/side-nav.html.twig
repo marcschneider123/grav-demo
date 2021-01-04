@@ -1,0 +1,60 @@
+{#d-flex align-content-between#}
+<side-nav inline-template>
+	<div class="navigation" :class="{closed: navClosed}">
+		<button @click="navClosed = !navClosed" class="btn btn-primary d-lg-none d-block">
+			<span v-show="!navClosed"><i class="fas fa-arrow-left"></i></span>
+			<span v-show="navClosed"><i class="fas fa-bars"></i></span>
+		</button>
+		<div class="nav-wrapper h-100 d-flex align-items-end flex-column">
+			<a href="/">
+				{{ media['user://images/logo.png'].html('','Header Logo', 'img-fluid py-5') }}
+			</a>
+			<b-nav vertical>
+				{{ _self.nav_mmLvl1(pages) }}
+			</b-nav>
+			<ul class="list-unstyled mt-auto mr-auto nav-footer">
+				<li>
+					<a href="mailto:{{ site.company.email|safe_email }}"
+					   title="{{ site.company.name }} per E-Mail kontaktieren"
+					>
+						<i class="fas fa-fw fa-envelope"></i>
+						E-Mail
+					</a>
+				</li>
+				<li>
+					<a href="tel:{{ site.company.phone }}"
+					   title="{{ site.company.name }} per Telefon kontaktieren"
+					>
+						<i class="fas fa-fw fa-phone"></i>
+						{{ site.company.phone }}
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</side-nav>
+
+{#Main nav level 1 items #}
+{% macro nav_mmLvl1(page) %}
+	{#	build megamenu-content for child pages #}
+	{% for p in page.children.visible %}
+		<li>
+			{#Main nav item has children? build dropdown #}
+			{% if p.children.visible.count > 0 %}
+				<b-nav-item-dropdown text="{{ p.menu }}">
+					{{ _self.nav_ddItem(p) }}
+				</b-nav-item-dropdown>
+			{% else %}
+				<b-nav-item href="{{ p.url }}">{{ p.menu }}</b-nav-item>
+			{% endif %}
+		</li>
+	{% endfor %}
+{% endmacro %}
+
+
+{#Main nav level 2 items #}
+{% macro nav_ddItem(page) %}
+	{% for p in page.children.visible %}
+		<b-dropdown-item href="{{ p.url }}">{{ p.menu }}</b-dropdown-item>
+	{% endfor %}
+{% endmacro %}

@@ -1,0 +1,91 @@
+textarea {
+	padding: 0.5rem;
+	min-height: 4rem;
+	width: 100%;
+}
+input{
+}
+
+.form-group {
+	margin-bottom: 2rem;
+}
+
+.form-control {
+	border-radius: $input-border-radius;
+	font-weight: 300;
+	height: $input-height;
+	//padding: 2rem;
+	background-color: $container-bg-medium;
+
+	&:focus{
+		border-color: $input-border-color!important;
+		box-shadow: unset;
+		border-color: initial;
+	}
+}
+
+.custom-file-label, .custom-file-label:after{
+	border-radius: $input-border-radius;
+}
+
+.form-check {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+::placeholder {
+	//padding: 0.25rem;
+}
+
+label {
+	&.required {
+		&:after {
+			content: '*';
+			padding-left: 3px;
+		}
+	}
+}
+
+//spamfilter
+input.required {
+	//display: none;
+}
+
+/**
+Parsley validation
+ */
+
+input.parsley-success, input.parsley-success:focus,
+select.parsley-success, select.parsley-success:focus,
+textarea.parsley-success, textarea.parsley-success:focus {
+	//color: $form-feedback-valid-color;
+	//background-color: rgba($form-feedback-valid-color, .1);
+	border: 1px solid $form-feedback-valid-color;
+}
+
+input.parsley-error,
+input.parsley-error:focus,
+select.parsley-error,
+select.parsley-error:focus,
+textarea.parsley-error,
+textarea.parsley-error:focus {
+	//color: $form-feedback-invalid-color;
+	//background-color: rgba($form-feedback-invalid-color, .1);
+	border: 1px solid $form-feedback-invalid-color;
+}
+
+.parsley-errors-list {
+	color: $form-feedback-invalid-color;
+	margin: 0.5rem 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 0.9rem;
+	line-height: 0.9rem;
+	opacity: 0;
+
+	transition: all $transD ease-in;
+
+	&.filled {
+		opacity: 1;
+	}
+}

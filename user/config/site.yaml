@@ -1,0 +1,27 @@
+title: 'Physiotherapie Art Vandelay'
+default_lang: de
+author:
+  name: 'Marc Schneider'
+  email: 'marcschneider123@gmail.com'
+# page customer data/settings
+company:
+  name: 'Physiotherapie Art Vandelay'
+  email: 'info@vandelay-industries.example'
+  url: 'http://grav-demo.rf.gd'
+  phone: 'KL5-2390'
+  fax: 'KL5-2390'
+  street: '129 West 81st Street'
+  zip: '10024'
+  city: 'New York'
+  gmaps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.008427321806!2d-73.97755838396021!3d40.78382887932417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258858bc92483%3A0xc2dbd61d22a17257!2s129%20W%2081st%20St%2C%20New%20York%2C%20NY%2010024%2C%20USA!5e0!3m2!1sde!2sde!4v1586787525401!5m2!1sde!2sde'
+metadata:
+  description: 'Physiotherapie Art Vandelay in 10024 New York'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
+blog:
+  route: /blog

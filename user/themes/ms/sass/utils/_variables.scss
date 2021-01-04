@@ -1,0 +1,153 @@
+$fixed-top-nav-height: 36px;
+
+
+
+//== Fonts
+//
+//## Google Fonts
+$googleFont:'Montserrat';
+@import url('https://fonts.googleapis.com/css?family=#{$googleFont}:700,400');
+$font-heading: $googleFont, 'Helvetica', 'Arial', 'sans-serif';
+$font-body: $googleFont, 'Helvetica', 'Arial', 'sans-serif';
+$font-alt: $googleFont, 'Helvetica', 'Arial', 'sans-serif';
+$font-size: 18px;
+$font-size-mobile: 16px;
+
+$font-size-h1-mobile: 24px;
+$font-size-h1: 42px;
+$font-weight-h1: 700;
+$line-height-h1: 1.2;
+
+$font-size-h2-mobile: 22px;
+$font-size-h2: 30px;
+$font-weight-h2: 300;
+$line-height-h2: 1.2;
+
+$font-size-h3: 24px;
+$font-size-h3-mobile: 20px;
+$font-weight-h3: 700;
+$line-height-h3: 1.2;
+
+$font-size-h4: 24px;
+$font-size-h4-mobile: 20px;
+$font-weight-h4: 300;
+$line-height-h4: 1.65;
+
+$line-height: 1.65;
+$line-height-secondary: 1.2;
+
+$text-color: $black;
+$text-color-hover: $theme-secondary;
+$text-color-primary: darken($theme-primary,10%);
+$text-color-secondary: $theme-secondary;
+$text-color-light: $white;
+$text-color-heading: $black;
+$text-color-heading-secondary: $black;
+$text-color-li: $black;
+
+//Transition duration & scale factor
+$transD: 0.5s;
+$transD_long: 1s;
+$scaleFactor: 1.05;
+
+
+// Reassign color vars to semantic color scheme
+//$brand-primary:         	  	$gray-dark;
+//$brand-secondary:         	  	$white;
+//$brand-success:            	  	$green;
+//$brand-info:               	 	$blue-medium;
+//$brand-warning:           	 	$orange;
+//$brand-danger: 					$red;
+//$brand-inverse:         	    $gray-dark;
+
+
+//== Container
+//
+//## div-container settings
+$container-border-size: 3px;
+$container-border-primary-color: $gray-dark;
+$container-border-secondary-color: $white;
+$container-border-radius: 0px;
+$container-bg-light: $white;
+$container-bg-medium: $gray-lighter;
+
+
+
+
+// Alerts
+//$alert-border-radius:  		    2px;
+//$alert-border-width:         	2px;
+//$alert-success-color: 			$brand-success;
+
+// Badge
+//$badge-default-bg:  		    $gray-medium;
+//$badge-default-color:  		    $text-color-primary;
+//
+//$badge-primary-bg:  		    $blue-medium;
+//
+//$badge-warning-bg:  		    $orange;
+//
+//$badge-danger-bg:  		    	$brand-danger;
+
+
+// Buttons
+$btn-border-radius:  		    3px;
+$btn-border-width:         	    2px;
+
+$btn-primary-color:        		$text-color-light;
+$btn-primary-bg:              	$theme-primary;
+$btn-primary-border:        	$theme-primary;
+$btn-primary-hover-bg: 			darken($theme-primary,3%);
+$btn-primary-hover-border:		darken($theme-primary,3%);
+$btn-primary-hover-color: 		$text-color-light;
+
+//$btn-secondary-color:           $brand-secondary;
+//$btn-secondary-bg:              transparent;
+//$btn-secondary-border:          $brand-secondary;
+//$btn-secondary-hover-bg:        $blue-medium;
+//$btn-secondary-hover-border:    $btn-secondary-border;
+//$btn-secondary-hover-color:     $btn-secondary-color;
+
+
+//== Cards
+//
+//## cards settings
+//$card-list-border-size: 1px;
+//$card-list-border-color: $black;
+//$card-list-border-radius: 0px;
+
+
+//== Forms
+//
+//## input, textarea settings
+$input-border-radius: 2px;
+$input-border-color: $gray-light;
+$input-border-width: 1px;
+
+$input-btn-padding-y: 2rem;
+$input-btn-padding-x: 2rem;
+$input-padding-y: $input-btn-padding-y;
+$input-padding-x: $input-btn-padding-x;
+$input-height: calc(#{$input-padding-y} * 2 + #{$input-border-width});
+
+
+//== Navigation
+//
+//## Define variables for top/main/side navigation
+$navbar-width: 250px;
+$navbar-height: 80px;
+$navbar-height-mobile: 60px;
+$nav-border-color1: $gray-lighter;
+$nav-border-color2: $gray-light;
+$nav-font-size: $font-size;
+$nav-font-size-mobile: $font-size-mobile;
+$navbar-color: $theme-primary;
+$navbar-color-hover: $theme-secondary;
+$navbar-dark-color: rgba($white, .75);
+$navbar-dark-hover-color: $theme-secondary;
+
+//== Tables
+//
+//## tables settings
+//$table-border-size: 1px;
+//$table-border-color: $gray-dark;

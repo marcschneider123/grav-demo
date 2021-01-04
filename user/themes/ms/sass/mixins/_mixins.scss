@@ -1,0 +1,56 @@
+@mixin headings($from: 1, $to: 6) {
+  @for $i from $from through $to {
+    h#{$i} {
+      @content
+    }
+  }
+}
+
+// Button hover/active styling
+//a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!
+//a:active MUST come after a:hover in the CSS definition in order to be effective!
+@mixin btn-style($txt, $bg, $border, $hover-bg, $hover-border, $hover-color) {
+  background: $bg;
+  border-color: $border;
+  border-radius: $btn-border-radius;
+  border-width: $btn-border-width;
+  color: $txt;
+  transition: all $transD ease;
+  text-transform: uppercase;
+  &:hover {
+    background: $hover-bg;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+  &:active, &.active, &:active:hover, &:focus, &:active:focus, &:not(:disabled):not(.disabled):active {
+    background: $hover-bg;
+    border-color: $hover-border;
+    color: $hover-color;
+  }
+
+  &:disabled {
+    background: $bg;
+    border-color: $border;
+    opacity: 0.25;
+  }
+}
+
+/*
+ * Shows only $lines on long paragraphs of text
+ * @param $lines Lines to show
+ * @param $fz font-size, default: font-size in utils/_variables
+ * @param $lh line-height, default: line-height in utils/_variables
+ * @usage @include linesToShow(2);
+ */
+@mixin linesToShow($lines, $fz:$font-size, $lh:$line-height) {
+
+  display: block; // Fallback for non-webkit
+  display: -webkit-box;
+  max-height: ($fz*$lh*$lines); // Fallback for non-webkit
+
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

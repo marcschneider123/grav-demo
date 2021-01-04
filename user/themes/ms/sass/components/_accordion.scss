@@ -1,0 +1,22 @@
+.accordion {
+	.card {
+		background-color: inherit;
+		border: 0;
+		color: $text-color;
+
+		.card-header {
+			background-color: transparent;
+			i {
+				//color: $white;
+				float: right;
+				font-size: 1.5em;
+				margin-top: -0.1em;
+				//margin-right: -40px;	//margin for angle-down
+			}
+		} //.card-header
+
+		.card-body {
+			color: $text-color;
+		} //.card-body
+	} //.card
+} //.accordion

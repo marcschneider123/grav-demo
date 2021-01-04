@@ -1,0 +1,53 @@
+Thumbs.db
+desktop.ini
+.DS_Store
+*.log
+
+.npmrc
+
+###
+# PHP Storm
+###
+
+.idea
+.phpstorm.meta.php
+_ide_helper.php
+
+
+###
+# Laravel
+###
+
+/vendor/
+node_modules/
+/stats/
+Homestead.yaml
+Homestead.json
+.sass-cache
+
+# Laravel 5 & Lumen specific
+.env.*.php
+.env.php
+.env
+
+# Grav specific
+backup/*
+!backup/.*
+cache/*
+assets/*
+logs/*
+images/*
+user/data/*
+user/plugins/*
+
+# local config and security
+user/*.localhost/config/security.yaml
+user/config/security.yaml
+#user/config/site.yaml
+user/config/system.yaml
+user/config/plugins/email.yaml
+
+tests/_output/*
+tests/_support/_generated/*
+tests/cache/*
+tests/error.log

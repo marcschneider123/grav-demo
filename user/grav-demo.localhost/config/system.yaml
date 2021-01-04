@@ -1,0 +1,9 @@
+cache:
+  enabled: false
+errors:
+  display: true
+debugger:
+  enabled: true
+twig:
+  cache: false
+  debug: true

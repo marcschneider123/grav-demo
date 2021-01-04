@@ -1,0 +1,109 @@
+//custom css, not from widget
+.qc-cmp-persistent-link {
+	background-color: $theme-primary!important;
+}
+
+// widget styles
+.qc-cmp-button {
+	background-color: $theme-primary !important;
+	border-color: $theme-primary !important;
+}
+
+.qc-cmp-button:hover {
+	background-color: transparent !important;
+	border-color: $theme-primary !important;
+	color: #000 !important;
+}
+
+.qc-cmp-alt-action,
+.qc-cmp-link {
+	color: $theme-primary !important;
+}
+
+.qc-cmp-button.qc-cmp-secondary-button:hover {
+	border-color: transparent !important;
+	background-color: $theme-primary !important;
+}
+
+.qc-cmp-button {
+	color: #FFFFFF !important;
+}
+
+.qc-cmp-button.qc-cmp-secondary-button {
+	color: #000000 !important;
+}
+
+.qc-cmp-button.qc-cmp-button.qc-cmp-secondary-button:hover {
+	color: #ffffff !important;
+}
+
+.qc-cmp-button.qc-cmp-secondary-button {
+	border-color: #c9c9c9 !important;
+	background-color: #c9c9c9 !important;
+}
+
+.qc-cmp-ui,
+.qc-cmp-ui .qc-cmp-main-messaging,
+.qc-cmp-ui .qc-cmp-messaging,
+.qc-cmp-ui .qc-cmp-beta-messaging,
+.qc-cmp-ui .qc-cmp-title,
+.qc-cmp-ui .qc-cmp-sub-title,
+.qc-cmp-ui .qc-cmp-purpose-info,
+.qc-cmp-ui .qc-cmp-table,
+.qc-cmp-ui .qc-cmp-table-header,
+.qc-cmp-ui .qc-cmp-vendor-list,
+.qc-cmp-ui .qc-cmp-vendor-list-title {
+	color: #000000 !important;
+}
+
+.qc-cmp-ui a,
+.qc-cmp-ui .qc-cmp-alt-action,
+.qc-cmp-toggle-status {
+	color: $theme-primary !important;
+}
+
+.qc-cmp-ui {
+	background-color: #FFFFFF !important;
+}
+
+.qc-cmp-publisher-purposes-table .qc-cmp-table-header {
+	background-color: #FFFFFF !important;
+}
+
+.qc-cmp-publisher-purposes-table .qc-cmp-table-row {
+	background-color: #FFFFFF !important;
+}
+
+.qc-cmp-vendor-list .qc-cmp-vendor-row {
+	background-color: #FFFFFF !important;
+}
+
+.qc-cmp-vendor-list .qc-cmp-vendor-row-header {
+	background-color: #FFFFFF !important;
+}
+
+.qc-cmp-table {
+	border: 1px solid #000000 !important;
+}
+
+.qc-cmp-table-row {
+	border-top: 1px solid #000000 !important;
+}
+
+.qc-cmp-table-row:last-child {
+	border-bottom: 1px solid #000000 !important;
+}
+
+.qc-cmp-toggle-status {
+	color: #000000 !important;
+}
+
+.qc-cmp-arrow-down {
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpolyline points='2 5 8 11 14 5'/%3E %3C/svg%3E") center no-repeat;
+}
+
+.qc-cmp-small-toggle.qc-cmp-toggle-on,
+.qc-cmp-toggle.qc-cmp-toggle-on {
+	background-color: #c9c9c9 !important;
+	border-color: #c9c9c9 !important;
+}

@@ -1,0 +1,14 @@
+<section class="features {{ page.header.module_classes }}">
+	<div class="row">
+		<div class="col-md-12">
+			{{ page.content }}
+			<ul>
+				{% for heading, feat in page.header.features %}
+					<li>
+						<strong>{{ heading }}</strong>: <i class="fas fa-{{ feat.icon }}"></i>{{ feat.text }}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,14 @@
+.fw {
+	width: 100%;
+}
+
+.hover-wrapper {
+	.hover-show {
+		opacity: 0;
+		display: inline;
+	}
+	
+	&:hover .hover-show {
+		opacity: 1;
+	}
+}

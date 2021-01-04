@@ -1,0 +1,76 @@
+<div class="fixed-top bg-light navbar-contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center mt-1">
+					<a href="mailto:{{ site.company.email|safe_email }}"
+					   title="{{ site.company.name }} per E-Mail kontaktieren"
+					   class="d-none d-md-inline-flex"
+					>
+						<div class="d-sm-inline"><i class="fas fa-fw fa-at"></i>{{ site.company.email|safe_email }}</div>
+					</a>
+					<a href="tel:{{ site.company.phone }}"
+					   title="{{ site.company.name }} per Telefon kontaktieren"
+					>
+						<div class="d-sm-inline"><i class="fas fa-fw fa-phone"></i>{{ site.company.phone }}</div>
+					</a>
+					<a class="text-link" href="/kontakt">
+						<i class="fas fa-envelope"></i>Kontakt
+					</a>
+			</div>
+		</div>
+	</div>
+</div>
+<template id="topnav">
+		<div class="navbar-header container-fluid d-flex justify-content-end">
+			<div class="row">
+				<div class="col-sm-5 offset-sm-1">
+					{{ media['user://images/logo.png'].html('','Header Logo', 'img-fluid') }}
+
+					{#								{{ page.media['logo.png'].html('', 'Header logo', 'img-fluid') }}#}
+				</div>
+				<div class="col-sm-6 pr-0">
+					{{ media['user://images/header.png'].html('','Header', 'img-fluid') }}
+					{#								{{ page.media['header.png'].html('', 'Header', 'img-fluid') }}#}
+				</div>
+			</div>
+		</div>
+	<b-navbar toggleable="md" type="dark" variant="primary" :sticky="true"
+		v-bind:class="{expanded: !isScrolled}"
+		v-scroll="toggleNavbar">
+{#		<b-navbar-brand href="{{ home_url }}">#}
+{#			<template v-pre>{{ media['user://images/logo.png'].html('','', 'logo') }}</template>#}
+{#		</b-navbar-brand>#}
+		<b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+		<b-collapse id="nav-collapse" is-nav class="d-flex2 justify-content-md-center">
+			<b-navbar-nav>
+				{{ _self.nav_mmLvl1(pages) }}
+			</b-navbar-nav>
+		</b-collapse>
+	</b-navbar>
+</template>
+
+
+{#Main nav level 1 items #}
+{% macro nav_mmLvl1(page) %}
+	{#	build megamenu-content for child pages #}
+	{% for p in page.children.visible %}
+			{#Main nav item has children? build dropdown #}
+			{% if p.children.visible.count > 0 %}
+				<b-nav-item-dropdown text="{{ p.menu }}">
+					{{ _self.nav_ddItem(p) }}
+				</b-nav-item-dropdown>
+			{% else %}
+				<b-nav-item href="{{ p.url }}">{{ p.menu }}</b-nav-item>
+			{% endif %}
+		</li>
+	{% endfor %}
+{% endmacro %}
+
+
+{#Main nav level 2 items #}
+{% macro nav_ddItem(page) %}
+	{% for p in page.children.visible %}
+		<b-dropdown-item href="{{ p.url }}">{{ p.menu }}</b-dropdown-item>
+	{% endfor %}
+{% endmacro %}

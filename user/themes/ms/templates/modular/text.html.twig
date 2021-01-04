@@ -1,0 +1,13 @@
+{% set image = page.media.images|first %}
+<section class="text {{ page.header.module_classes }}">
+	<div class="row">
+		<div class="col-md-6 {{ page.header.image_align == 'right' ? 'order-last' }}">
+			{% if image %}
+				{{ image.cropResize(400,400).html('','','img-fluid align-'~page.header.image_align) }}
+			{% endif %}
+		</div>
+		<div class="col-md-6">
+			{{ content }}
+		</div>
+	</div>
+</section>

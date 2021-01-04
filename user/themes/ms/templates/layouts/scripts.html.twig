@@ -1,0 +1,11 @@
+{% if config.system.debugger.enabled %}
+	{% do assets.addJs('jquery', 101) %}
+{% endif %}
+
+{{ assets.js() }}
+
+{# page specific scripts
+<script type="text/javascript">
+	@yield('pageScripts')
+</script>
+ #}

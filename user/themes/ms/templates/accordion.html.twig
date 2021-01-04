@@ -1,0 +1,28 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block content %}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12">
+				<h1>{{ page.title }}</h1>
+				{{ page.content }}
+			</div>
+			<div class="col-12">
+				<div role="tablist">
+					{% for id, card in page.header.accordion %}
+						<b-card no-body class="mb-2">
+							<b-card-header header-tag="header" role="tab" class="p-0 border-0">
+								<b-button block href="#" v-b-toggle.{{ id }} variant="primary" class="rounded-0">{{ card.header }}</b-button>
+							</b-card-header>
+							<b-collapse id="{{ id }}" accordion="my-accordion" role="tabpanel">
+								<b-card-body>
+									<b-card-text>{{~ card.body|markdown ~}}</b-card-text>
+								</b-card-body>
+							</b-collapse>
+						</b-card>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

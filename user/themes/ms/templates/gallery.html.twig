@@ -1,0 +1,30 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block content %}
+	<section class="{{ page.header.module_classes }}">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1>{{ page.title }}</h1>
+					<p>{{ page.content }}</p>
+				</div>
+				<div class="col-12">
+					<gallery :media="
+						[
+					{% for image in page.media.images %}
+						{
+							thumb: '{{ image.cropResize(150,150).url }}',
+							src: '{{ image.url }}',
+							caption: '{{ image.meta.caption}}'
+						},
+					{% endfor %}
+						]"
+							 :show-caption="{{ page.header.gallery.caption|default('false')}}"
+					>
+					</gallery>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+.alert {
+  &.alert-info {
+    background-color: $container-bg-light;
+    //border-color: $brand-info;
+    color: $text-color;
+  }
+  &.alert-warning {
+    background-color: $container-bg-light;
+    color: $text-color;
+  }
+}

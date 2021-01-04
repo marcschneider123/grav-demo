@@ -1,0 +1,57 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+					<h1>
+						{{ page.title }}
+					</h1>
+				</div>
+			<div class="col-md-8 col-lg-6 col-xl-5">
+				<b-card
+					title="{{site.company.name}}"
+					img-src="{{ page.media['logo.png'].url }}"
+					img-alt="{{ site.author.name }}"
+					img-top
+{#					style="margin: 0 30px"#}
+					class="p-2 mb-5"
+				>
+					<b-card-text>
+						<p>
+							{{ site.company.street }} <br>
+							{{ site.company.zip }} {{ site.company.city }}
+						</p>
+
+						<p>
+							Telefon: {{ site.company.phone }}<br>
+							Fax: {{ site.company.fax }}<br>
+							E-Mail: <a href="mailto:{{ site.company.email|safe_email }}">{{ site.company.email|safe_email }}</a>
+						</p>
+						<p class="text-primary m-0">Gerne komme ich auch zu Ihnen nach Hause.</p>
+					</b-card-text>
+				</b-card>
+			</div>
+			<div class="col-lg-6 col-xl-7">
+				<h2>Termine</h2>
+				<p>
+					Termine nach telefonischer Vereinbarung<br>
+					Alle Kassen und Privat<br>
+				</p>
+				<p class="mb-0">
+					Hausbesuche (innerhalb 7 km):
+				</p>
+				<ul>
+					<li>Lorem ipsum dolor sit amet.</li>
+					<li>Dolor quam repellat sequi suscipit?</li>
+					<li>Harum laudantium quam repellat sit.</li>
+					<li>Blanditiis ipsam perferendis quo voluptatum?</li>
+				</ul>
+{#				<contact-form></contact-form>#}
+			</div>
+			<div class="col-12">
+				{{ page.content }}
+			</div>
+		</div>
+	</div>
+{% endblock %}

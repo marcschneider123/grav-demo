@@ -1,0 +1,27 @@
+// Styling for the footer
+footer {
+	padding: .75rem 0;
+	text-align: center;
+	color: $text-color-secondary;
+	background-color: $light;
+
+	@include media-breakpoint-down(sm){
+		span, a {
+			font-size: 0.9rem;
+		}
+	}
+
+	ul {
+		margin-bottom: 0;
+		li, li a {
+				//font-size: 0.75rem;
+				color: $text-color-secondary;
+				&:hover,
+				&:focus,
+				&:active,
+				&.active {
+					text-decoration: none;
+				}
+		}
+	}
+}

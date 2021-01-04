@@ -1,0 +1,23 @@
+<section class="{{ page.header.module_classes }}">
+	<div class="row">
+		<div class="col-12">
+			<b-carousel
+				id="carousel-1"
+				:interval="4000"
+				controls
+				indicators
+				img-width="1200"
+				img-height="800"
+				style="text-shadow: 1px 1px 2px #333;"
+			>
+				{% for image in page.media.images %}
+					<b-carousel-slide
+						caption="{{ image.meta.title }}"
+						text="{{image.meta.description}}"
+						img-src="{{image.cropResize(1200,800).url}}"
+					></b-carousel-slide>
+				{% endfor %}
+			</b-carousel>
+		</div>
+	</div>
+</section>

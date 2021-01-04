@@ -1,0 +1,8 @@
+{% extends 'layouts/base.html.twig' %}
+
+{% block content %}
+{#	Loop over every module in page #}
+	{% for module in page.collection() %}
+		{{ module.content }}
+	{% endfor %}
+{% endblock %}
